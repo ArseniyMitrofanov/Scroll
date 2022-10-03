@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E533D6333561A7909D9A811E /* Pods_scrollVCiewHW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A934A820412B04612F63463D /* Pods_scrollVCiewHW.framework */; };
 		EAFC068028DC626D00BDD27C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC067F28DC626D00BDD27C /* AppDelegate.swift */; };
 		EAFC068228DC626D00BDD27C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC068128DC626D00BDD27C /* SceneDelegate.swift */; };
 		EAFC068428DC626D00BDD27C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC068328DC626D00BDD27C /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		457338C2AEF144625E245403 /* Pods-scrollVCiewHW.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scrollVCiewHW.release.xcconfig"; path = "Target Support Files/Pods-scrollVCiewHW/Pods-scrollVCiewHW.release.xcconfig"; sourceTree = "<group>"; };
+		A934A820412B04612F63463D /* Pods_scrollVCiewHW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_scrollVCiewHW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E32299745BB12F24C13C61D1 /* Pods-scrollVCiewHW.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scrollVCiewHW.debug.xcconfig"; path = "Target Support Files/Pods-scrollVCiewHW/Pods-scrollVCiewHW.debug.xcconfig"; sourceTree = "<group>"; };
 		EAFC067C28DC626D00BDD27C /* scrollVCiewHW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scrollVCiewHW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFC067F28DC626D00BDD27C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAFC068128DC626D00BDD27C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E533D6333561A7909D9A811E /* Pods_scrollVCiewHW.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8A9A8CD84D68DAA0BBC36E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E32299745BB12F24C13C61D1 /* Pods-scrollVCiewHW.debug.xcconfig */,
+				457338C2AEF144625E245403 /* Pods-scrollVCiewHW.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C95BCB67DBE186392DC276A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A934A820412B04612F63463D /* Pods_scrollVCiewHW.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EAFC067328DC626D00BDD27C = {
 			isa = PBXGroup;
 			children = (
 				EAFC067E28DC626D00BDD27C /* scrollVCiewHW */,
 				EAFC067D28DC626D00BDD27C /* Products */,
+				B8A9A8CD84D68DAA0BBC36E7 /* Pods */,
+				C95BCB67DBE186392DC276A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +98,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAFC069028DC627200BDD27C /* Build configuration list for PBXNativeTarget "scrollVCiewHW" */;
 			buildPhases = (
+				EA5E569A28EAB89500FA348A /* ShellScript */,
+				83E7B067D2817C352099B203 /* [CP] Check Pods Manifest.lock */,
 				EAFC067828DC626D00BDD27C /* Sources */,
 				EAFC067928DC626D00BDD27C /* Frameworks */,
 				EAFC067A28DC626D00BDD27C /* Resources */,
@@ -132,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		83E7B067D2817C352099B203 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-scrollVCiewHW-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA5E569A28EAB89500FA348A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EAFC067828DC626D00BDD27C /* Sources */ = {
@@ -282,6 +350,7 @@
 		};
 		EAFC069128DC627200BDD27C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E32299745BB12F24C13C61D1 /* Pods-scrollVCiewHW.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +378,7 @@
 		};
 		EAFC069228DC627200BDD27C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 457338C2AEF144625E245403 /* Pods-scrollVCiewHW.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
